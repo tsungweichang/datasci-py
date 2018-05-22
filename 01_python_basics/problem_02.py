@@ -9,14 +9,20 @@ Implement a half-life function that uses a while loop.
 f(t) = a * (1/2)^t
 '''
 def half_life_while(a, t):
-  return 1 # delete this line and write your code
+    n = 1
+    half_life_while_output = [a]
+    while n <= t:
+        half_life_while_output.append(a*(0.5**n))
+        n+1
+    return half_life_while_output
 
 '''
 Exercise 2:
 Implement a half-life function that uses a for loop.
 '''
 def half_life_for(a, t):
-  return 1 # delete this line and write your code
+    half_life_for_output = [a*(0.5**i) for i in range(t)]
+    return half_life_for_output
 
 '''
 Exercise 3:
