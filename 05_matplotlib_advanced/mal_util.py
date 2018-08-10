@@ -12,8 +12,12 @@ def load_mal(mal_fpath):
   type_set = set()
 
   with open(mal_fpath , 'r', encoding='cp932', errors='ignore') as f:
+<<<<<<< HEAD
     print(f.readline())
     #headers = f.readline().strip().split(',')
+=======
+    headers = f.readline().strip().split(',')
+>>>>>>> upstream/master
     studios, sources = set(), set()
     for line in csv.reader(f, quotechar='"', delimiter=',',
                                quoting=csv.QUOTE_MINIMAL):
